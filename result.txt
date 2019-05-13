@@ -1,0 +1,45 @@
+Start evaluating kNN with k=1.
+Tested: 1000 Accuracy:0.962000
+Tested: 2000 Accuracy:0.960000
+Tested: 3000 Accuracy:0.957333
+Tested: 4000 Accuracy:0.955750
+Tested: 5000 Accuracy:0.955800
+Tested: 6000 Accuracy:0.959667
+Tested: 7000 Accuracy:0.962571
+Tested: 8000 Accuracy:0.966250
+Tested: 9000 Accuracy:0.968667
+Tested: 10000 Accuracy:0.969100
+Test finished. Final accuracy: 0.969100Start evaluating kNN with k=3.
+Tested: 1000 Accuracy:0.962000
+Tested: 2000 Accuracy:0.958500
+Tested: 3000 Accuracy:0.956333
+Tested: 4000 Accuracy:0.957750
+Tested: 5000 Accuracy:0.956600
+Tested: 6000 Accuracy:0.960667
+Tested: 7000 Accuracy:0.963857
+Tested: 8000 Accuracy:0.967375
+Tested: 9000 Accuracy:0.970111
+Tested: 10000 Accuracy:0.970200
+Test finished. Final accuracy: 0.970200Start evaluating kNN with k=5.
+Tested: 1000 Accuracy:0.962000
+Tested: 2000 Accuracy:0.956500
+Tested: 3000 Accuracy:0.954000
+Tested: 4000 Accuracy:0.955000
+Tested: 5000 Accuracy:0.955000
+Tested: 6000 Accuracy:0.958833
+Tested: 7000 Accuracy:0.962286
+Tested: 8000 Accuracy:0.966000
+Tested: 9000 Accuracy:0.968333
+Tested: 10000 Accuracy:0.968600
+Test finished. Final accuracy: 0.968600Start evaluating kNN with k=9.
+Tested: 1000 Accuracy:0.953000
+Tested: 2000 Accuracy:0.950500
+Tested: 3000 Accuracy:0.950667
+Tested: 4000 Accuracy:0.950500
+Tested: 5000 Accuracy:0.951400
+Tested: 6000 Accuracy:0.956167
+Tested: 7000 Accuracy:0.959571
+Tested: 8000 Accuracy:0.963375
+Tested: 9000 Accuracy:0.966222
+Tested: 10000 Accuracy:0.966400
+Test finished. Final accuracy: 0.966400Acc K=1: 0.969100, Acc K=3: 0.970200, Acc K=5: 0.968600, Acc K=9: 0.966400
