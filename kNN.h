@@ -8,6 +8,8 @@ typedef struct _RESULT_PAIR
 {
     uint32_t index;
     uint32_t distance;
+    uint32_t label;
+    uint32_t occurTimes;
 }RESULT_PAIR;
 
 #endif // __KNN_H__
