@@ -13,7 +13,7 @@ int main(void)
     uint32_t errorCount=0;
     for(uint32_t i=0;i<mnistTestList.len;i+=1)
     {
-        uint8_t result=KnnFit(&mnistTrainList,&mnistTestList.chars[i],1);
+        uint8_t result=KnnFit(&mnistTrainList,&mnistTestList.chars[i],7);
         if(result!=mnistTestList.chars[i].label)
             errorCount++;
 

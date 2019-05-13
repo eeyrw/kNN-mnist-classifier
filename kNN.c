@@ -25,6 +25,10 @@ uint32_t KnnVote(RESULT_PAIR* resultPairList,int kNb)
 {
     hash_table ht;
     ht_init(&ht, HT_KEY_CONST | HT_VALUE_CONST, 0.05);
+    for(int i=0;i<kNb;i++)
+    {
+        resultPairList[i].occurTimes=1;
+    }
 
     for(int i=0;i<kNb;i++)
     {
@@ -43,6 +47,24 @@ uint32_t KnnVote(RESULT_PAIR* resultPairList,int kNb)
     size_t keyNum;
 
     void** keys=ht_keys(&ht,&keyNum);
+    uint32_t maxTimes=0;
+    uint32_t maxTimesKey=resultPairList[0].label;
+    //printf("Start Vote\n\n");
+    for(int i=0;i<keyNum;i++)
+    {
+        size_t valueSize;
+        uint32_t* value=ht_get(&ht,keys[i],sizeof(uint32_t),&valueSize);
+        if((*value)>maxTimes)
+        {
+            maxTimes=(*value);
+            maxTimesKey=(*(uint32_t*)keys[i]);
+        }
+        //printf("Label:%d Times:%d\n",(*(uint32_t*)keys[i]),(*value));
+    }
+    //printf("\n\nEnd Vote\n");
+    free(keys);
+    ht_destroy(&ht);
+    return maxTimesKey;
 
 
 }

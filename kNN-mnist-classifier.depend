@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557722112 source:e:\work-directory\knn-mnist-classifier\main.c
+1557733705 source:e:\work-directory\knn-mnist-classifier\main.c
 	<stdio.h>
 	"MnistLoader.h"
 	"kNN.h"
@@ -13,20 +13,38 @@
 	<stdlib.h>
 	"MnistLoader.h"
 
-1557724114 e:\work-directory\knn-mnist-classifier\knn.h
+1557731016 e:\work-directory\knn-mnist-classifier\knn.h
 	<stdint.h>
 	"MnistLoader.h"
 
-1557724109 source:e:\work-directory\knn-mnist-classifier\knn.c
+1557733324 source:e:\work-directory\knn-mnist-classifier\knn.c
 	<stdio.h>
 	<stdint.h>
 	<stdlib.h>
 	"kNN.h"
 	"MnistLoader.h"
+	"hashtable.h"
 
 1557722592 source:e:\work-directory\knn-mnist-classifier\hash.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<stdbool.h>
+
+1373531186 source:e:\work-directory\knn-mnist-classifier\hashtable-0.1.1\src\hashtable.c
+	"hashtable.h"
+	"murmur.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1373531186 e:\work-directory\knn-mnist-classifier\hashtable-0.1.1\src\hashtable.h
+	<stdint.h>
+	<stddef.h>
+
+1373531186 e:\work-directory\knn-mnist-classifier\hashtable-0.1.1\src\murmur.h
+	<stdint.h>
+
+1373531186 source:e:\work-directory\knn-mnist-classifier\hashtable-0.1.1\src\murmur.c
+	"murmur.h"
 
