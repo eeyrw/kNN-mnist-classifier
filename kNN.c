@@ -9,12 +9,13 @@ int compare(const void * a, const void * b)
     return ( (*(RESULT_PAIR*)a).distance - (*(RESULT_PAIR*)b).distance );
 }
 
-float CalcL2(uint8_t* vect1,uint8_t* vect2,int vectLen)
+uint32_t CalcL2(uint8_t* vect1,uint8_t* vect2,int vectLen)
 {
-    float L2=0;
+    uint32_t L2=0;
     for(int i=0;i<vectLen;i+=1)
     {
-        L2+=(vect1[i]-vect2[i])*(vect1[i]-vect2[i]);
+        int32_t a=vect1[i]-vect2[i];
+        L2+=a*a;
     }
     return L2;
 }

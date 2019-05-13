@@ -13,15 +13,14 @@
 	<stdlib.h>
 	"MnistLoader.h"
 
-1557722019 e:\work-directory\knn-mnist-classifier\knn.h
+1557724114 e:\work-directory\knn-mnist-classifier\knn.h
 	<stdint.h>
 	"MnistLoader.h"
 
-1557723697 source:e:\work-directory\knn-mnist-classifier\knn.c
+1557724109 source:e:\work-directory\knn-mnist-classifier\knn.c
 	<stdio.h>
 	<stdint.h>
 	<stdlib.h>
-	<time.h>
 	"kNN.h"
 	"MnistLoader.h"
 

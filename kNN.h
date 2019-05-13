@@ -7,7 +7,7 @@ extern uint8_t KnnFit(MNIST_CHAR_LIST* trainDataList,MNIST_CHAR* testChar,int kN
 typedef struct _RESULT_PAIR
 {
     uint32_t index;
-    float distance;
+    uint32_t distance;
 }RESULT_PAIR;
 
 #endif // __KNN_H__
