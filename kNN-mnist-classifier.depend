@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1557713246 source:e:\work-directory\knn-mnist-classifier\main.c
+1557722112 source:e:\work-directory\knn-mnist-classifier\main.c
 	<stdio.h>
 	"MnistLoader.h"
+	"kNN.h"
 
 1557712984 e:\work-directory\knn-mnist-classifier\mnistloader.h
 	<stdint.h>
@@ -11,4 +12,22 @@
 	<stdint.h>
 	<stdlib.h>
 	"MnistLoader.h"
+
+1557722019 e:\work-directory\knn-mnist-classifier\knn.h
+	<stdint.h>
+	"MnistLoader.h"
+
+1557723697 source:e:\work-directory\knn-mnist-classifier\knn.c
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+	<time.h>
+	"kNN.h"
+	"MnistLoader.h"
+
+1557722592 source:e:\work-directory\knn-mnist-classifier\hash.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<stdbool.h>
 
