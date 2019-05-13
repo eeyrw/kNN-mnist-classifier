@@ -12,8 +12,13 @@ typedef struct _MNIST_CHAR
     uint8_t label;
 }MNIST_CHAR;
 
+typedef struct _MNIST_CHAR_LIST
+{
+    uint32_t len;
+    MNIST_CHAR* chars;
+}MNIST_CHAR_LIST;
 
-extern MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath);
-extern int MnistFree(MNIST_CHAR* charImages);
+extern MNIST_CHAR_LIST MnistLoad(char* dataSetPath,char* dataLabelPath);
+extern int MnistFree(MNIST_CHAR_LIST charList);
 
 #endif

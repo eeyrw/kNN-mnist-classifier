@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include "MnistLoader.h"
 
 
@@ -13,11 +14,15 @@ uint32_t BgEndToLtlEnd_U32(uint32_t num)
 }
 
 
-MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
+MNIST_CHAR_LIST MnistLoad(char* dataSetPath,char* dataLabelPath)
 {
     FILE *imageFile;
     FILE *labelFile;
     MNIST_CHAR* charImages;
+    MNIST_CHAR_LIST charList;
+
+    charList.len=0;
+    charList.chars=NULL;
 
 	imageFile=fopen(dataSetPath,"rb");
     labelFile=fopen(dataLabelPath,"rb");
@@ -25,7 +30,7 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
 	if (!imageFile || !labelFile)
 	{
 		printf("Unable to open file!");
-		return -1;
+		return charList;
 	}
 
     // TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
@@ -59,7 +64,7 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
         magicNumber[3]!=0x03 )
     {
 		printf("Invalid data set!");
-		return NULL;
+		return charList;
     }
 
     fread(magicNumber,1,sizeof(magicNumber),labelFile);
@@ -69,7 +74,7 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
         magicNumber[3]!=0x01 )
     {
 		printf("Invalid label set!");
-		return NULL;
+		return charList;
     }
 
     uint32_t imageNum,labelNum;
@@ -82,7 +87,7 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
     if(imageNum!=labelNum)
     {
  		printf("Number of image don't fit the number of label!");
-		return NULL;
+		return charList;
     }
 
     uint32_t imageWidth,imageHeight;
@@ -94,7 +99,7 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
     if(imageHeight!=CHAR_H || imageWidth!=CHAR_W)
     {
  		printf("Wrong size images!");
-		return NULL;
+		return charList;
     }
 
     charImages=malloc(sizeof(MNIST_CHAR)*imageNum);
@@ -107,10 +112,13 @@ MNIST_CHAR* MnistLoad(char* dataSetPath,char* dataLabelPath)
 
 	fclose(imageFile);
     fclose(labelFile);
-	return charImages;
+    charList.chars=charImages;
+    charList.len=imageNum;
+	return charList;
 }
 
-int MnistFree(MNIST_CHAR* charImages)
+int MnistFree(MNIST_CHAR_LIST charList)
 {
-    free(charImages);
+    free(charList.chars);
+    return 0;
 }
