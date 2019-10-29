@@ -6,6 +6,13 @@
 #define CHAR_W 28
 #define CHAR_H 28
 
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+
 typedef struct _MNIST_CHAR
 {
     uint8_t pixels[CHAR_W*CHAR_H];
@@ -20,5 +27,7 @@ typedef struct _MNIST_CHAR_LIST
 
 extern MNIST_CHAR_LIST MnistLoad(char* dataSetPath,char* dataLabelPath);
 extern int MnistFree(MNIST_CHAR_LIST charList);
-
+#ifdef __cplusplus
+}
+#endif
 #endif
